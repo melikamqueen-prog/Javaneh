@@ -1,0 +1,593 @@
+
+:root {
+  --cream: #F5EFE3;
+  --white: #FFFFFF;
+  --olive: #788568;
+  --sage: #C5D0B5;
+  --pink: #EABBC0;
+  --dark: #343B30;
+  --text: #62675D;
+  --light: #F9F7F1;
+  --border: #E8E3D8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* HEADER */
+
+.site-header {
+  width: 100%;
+  min-height: 85px;
+  padding: 15px 8%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--olive);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 20px;
+  color: var(--olive);
+}
+
+.brand small {
+  display: block;
+  font-size: 9px;
+  color: var(--text);
+  direction: ltr;
+}
+
+.main-nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.main-nav a:hover {
+  color: var(--olive);
+}
+
+/* HERO */
+
+.hero {
+  background: var(--cream);
+  min-height: 390px;
+  padding: 65px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.eyebrow {
+  color: var(--olive);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.hero p {
+  color: var(--text);
+  max-width: 480px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--olive);
+  color: var(--white);
+  padding: 10px 27px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  background: var(--dark);
+  transform: translateY(-3px);
+}
+
+/* HERO DECORATION */
+
+.hero-decoration {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.hero-circle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: var(--sage);
+  display: grid;
+  place-items: center;
+  font-size: 95px;
+}
+
+.decor {
+  position: absolute;
+  color: var(--olive);
+  font-size: 35px;
+}
+
+.decor-one {
+  top: 0;
+  right: 5px;
+}
+
+.decor-two {
+  bottom: 5px;
+  left: 0;
+  color: var(--pink);
+}
+
+/* PLANT SECTION */
+
+.plant-section {
+  padding: 75px 8%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 27px;
+  margin: 8px 0;
+}
+
+.section-heading p {
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* PLANT TABS */
+
+.plant-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.plant-tab {
+  min-width: 130px;
+  padding: 11px 25px;
+  border: 1px solid var(--olive);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--olive);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.plant-tab:hover,
+.plant-tab.active {
+  background: var(--olive);
+  color: var(--white);
+}
+
+/* PLANT CONTENT */
+
+.plant-content {
+  display: none;
+  animation: appear 0.4s ease;
+}
+
+.plant-content.active {
+  display: block;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PLANT INTRO */
+
+.plant-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 22px;
+  margin-bottom: 40px;
+}
+
+/* IMAGE BOX */
+
+.plant-image {
+  width: 100%;
+  height: 290px;
+  min-height: 290px;
+  overflow: hidden;
+  background: var(--cream);
+  border: 2px dashed var(--sage);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--olive);
+  text-align: center;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* تصاویر داخل کادر */
+
+.plant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* اگر بخواهی کل عکس دیده شود، cover را به contain تغییر بده */
+
+.plant-image img.contain {
+  object-fit: contain;
+}
+
+.sedum-image {
+  background: #F2F3EA;
+}
+
+.plant-label {
+  color: var(--olive);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.plant-info h2 {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.scientific-name {
+  color: var(--olive);
+  direction: ltr;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.plant-info > p:not(.scientific-name) {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.quick-facts span {
+  background: var(--cream);
+  color: var(--dark);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 11px;
+}
+
+/* CARE CARDS */
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 35px 0 50px;
+}
+
+.care-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.care-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--sage);
+  box-shadow: 0 8px 25px rgba(70, 80, 60, 0.07);
+}
+
+.care-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+  background: var(--cream);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.care-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.care-card p {
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* PROBLEMS */
+
+.problems {
+  margin: 50px 0;
+}
+
+.problem-list {
+  display: grid;
+  gap: 12px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.problem-list details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px 20px;
+}
+
+.problem-list summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.problem-list details[open] summary {
+  color: var(--olive);
+}
+
+.problem-list details p {
+  color: var(--text);
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* GOLDEN TIP */
+
+.golden-tip {
+  background: #EEF0E7;
+  border-right: 4px solid var(--olive);
+  border-radius: 12px;
+  padding: 22px 25px;
+  margin: 40px 0;
+}
+
+.golden-tip span {
+  font-weight: 700;
+  color: var(--olive);
+  font-size: 15px;
+}
+
+.golden-tip p {
+  color: var(--text);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about-section {
+  text-align: center;
+  padding: 65px 20px;
+  background: var(--cream);
+}
+
+.about-symbol {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.about-section h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.about-section p {
+  color: var(--text);
+  font-size: 14px;
+  max-width: 550px;
+  margin: auto;
+}
+
+.about-brand {
+  display: inline-block;
+  color: var(--olive);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 25px;
+  direction: ltr;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  background: var(--olive);
+  color: var(--white);
+  padding: 17px;
+  font-size: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .care-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plant-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-image {
+    height: 260px;
+    min-height: 260px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .main-nav {
+    gap: 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 45px 7%;
+    text-align: center;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .hero-decoration {
+    width: 170px;
+    height: 170px;
+  }
+
+  .hero-circle {
+    width: 145px;
+    height: 145px;
+    font-size: 65px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .plant-section {
+    padding: 50px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-intro {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .plant-image {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .plant-info h2 {
+    font-size: 25px;
+  }
+
+  .plant-tab {
+    min-width: 110px;
+  }
+
+  .quick-facts span {
+    font-size: 10px;
+  }
+
+  .about-section {
+    padding: 50px 7%;
+  }
+}
+
+.brand-logo {
+  width: 150px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+}
