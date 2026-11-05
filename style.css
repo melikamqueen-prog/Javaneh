@@ -586,8 +586,10 @@ footer {
 }
 
 .brand-logo {
-  width: 150px;
+  width: 65px;
   height: 65px;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
+  flex-shrink: 0;
 }
